@@ -1,12 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { LoginScreenOptions, HomeScreenOptions } from "./src/Screens/Config/Options";
+import { LoginScreenOptions, HomeScreenOptions, RegisterScreenOptions } from "./src/Screens/Config/Options";
 import LoginScreen from "./src/Screens/User/LoginScreen/LoginScreen";
-import HomeScreen from "./src/Screens/HomeScreen";
-import RegisterScreen from "./src/Screens/User/RegisterScreen/RegisterScree";
+import HomeScreen from "./src/Screens/HomeScreen/HomeScreen";
+import RegisterScreen from "./src/Screens/User/RegisterScreen/RegisterScreen";
 
 const Stack = createNativeStackNavigator();
-
 
 
 export default function App() {
@@ -14,7 +13,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} options={LoginScreenOptions} />
-        <Stack.Screen name="Register" component={RegisterScreen}/>
+        <Stack.Screen name="Register" component={RegisterScreen} options={RegisterScreenOptions}/>
         <Stack.Screen name="Home" component={HomeScreen} options={HomeScreenOptions}/>
       </Stack.Navigator>
     </NavigationContainer>

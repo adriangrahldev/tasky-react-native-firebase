@@ -6,7 +6,12 @@ export const LoginScreenOptions: NativeStackNavigationOptions  = {
 };
 
 export const HomeScreenOptions: NativeStackNavigationOptions  = {
-    headerShown: true,
+    headerShown: false,
+    statusBarHidden: true,
+};
+export const RegisterScreenOptions: NativeStackNavigationOptions  = {
+    headerShown: false,
+    statusBarHidden: true,
 };
 
 

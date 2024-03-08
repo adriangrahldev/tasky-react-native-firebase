@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const LoginScreenStyles = StyleSheet.create({
+export const RegisterScreenStyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#1D24CA',
@@ -38,8 +38,12 @@ export const LoginScreenStyles = StyleSheet.create({
     },
     subTitle: {
         fontSize: 18,
-        marginBottom: 20,
         fontWeight: '700',
+    },
+    subTitleHelp: {
+        fontSize: 16,
+        marginBottom: 20,
+        color: '#C4C4C4',
     },
     textInput: {
         width: 300,
@@ -80,7 +84,7 @@ export const LoginScreenStyles = StyleSheet.create({
     link: {
         color: '#C4C4C4',
     },
-    noAccountLink: {
+    hasAccountLink: {
         color: '#1D24CA',
         marginBottom: 10,
     },
