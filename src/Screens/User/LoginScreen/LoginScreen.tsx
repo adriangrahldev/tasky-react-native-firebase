@@ -28,7 +28,7 @@ const LoginScreen = ({ navigation }: { navigation: NavigationProp<any> }) => {
     await signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
       const user = userCredential.user;
       console.log(user);
-      navigation.navigate("Home");
+      navigation.navigate("App");
     }).catch((error: FirebaseError) => {
       const errorCode = error.code;
       const errorMessage = error.message;

@@ -47,7 +47,7 @@ const RegisterScreen = ({ navigation }: { navigation: NavigationProp<any> }) => 
         })
           .then(() => {
             console.log("User updated");
-            navigation.navigate("Home");
+            navigation.navigate("Register");
           })
           .catch((error) => {
             console.log(error);
