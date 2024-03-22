@@ -7,8 +7,6 @@ import { RegisterScreenStyles } from "./RegisterScreenStyles";
 import { useState } from "react";
 import {
   auth,
-    createUserWithEmailAndPassword,
-  updateProfile,
 } from "../../../../firebaseConfig";
 import { FirebaseError } from "@firebase/util";
 
@@ -39,31 +37,7 @@ const RegisterScreen = ({ navigation }: { navigation: NavigationProp<any> }) => 
       return;
     }
 
-    await createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        updateProfile(user, {
-          displayName: name,
-        })
-          .then(() => {
-            console.log("User updated");
-            navigation.navigate("Register");
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      })
-      .catch((error: FirebaseError) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        if (errorCode === "auth/invalid-email") {
-          setEmailError("* Email no válido");
-        }
-        if (errorCode === "auth/email-already-in-use") {
-          setEmailError("* Email ya registrado");
-        }
-      });
-
+      
     
   };
 
